@@ -1,9 +1,6 @@
 package eckel.collections;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Ex10 {
 
@@ -23,12 +20,15 @@ public class Ex10 {
 
     }
 
-    public static void main(String[] args) {
-        List<Rodent> rodents=new ArrayList<>();
+    public static void main(String[] args) throws Exception {
+        /*List<Rodent> rodents=new ArrayList<>();
         Ex10.fill(10,rodents);
         Iterator it=rodents.iterator();
         while (it.hasNext()){
-            System.out.println(it.next());
+            System.out.println(it.next());*/
+        ;
+        for(Rodent rod:new Rodents().createArray(10)){
+            System.out.println(rod.toString());;
         }
     }
 
@@ -50,4 +50,26 @@ class Hamster extends Rodent{
     public String toString() {
         return"I'm a Hamster";
     }
+}
+class Rodents{
+    Random random=new Random(47);
+    public  Rodent[] createArray(int size){
+        Rodent[] arr=new Rodent[size];
+        for (int i = 0; i < size; i++) {
+switch (random.nextInt(3)){
+    case 0: arr[i]=new Mouse();break;
+    case 1: arr[i]=new Hamster();break;
+    case 2: arr[i]=new GebrilRodent();break;
+
+}
+        }
+        return arr;
+    }
+    /*Map<Rodent,Integer> counter(Rodent[] arr){
+        Map<Rodent,Integer> map=new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            Rodent freq=arr[i];
+            map(freq,freq==null?)
+        }
+    }*/
 }
