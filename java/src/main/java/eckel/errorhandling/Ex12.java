@@ -1,5 +1,11 @@
 /*
-package eckel.innerclass;
+package eckel.errorhandling;
+
+import eckel.innerclass.SelectorEx2;
+import eckel.innerclass.SequenceEx2;
+
+public class Ex12 {
+}
 
 
 
@@ -8,7 +14,7 @@ interface Selector {
     Object current();
     void next();
 }
-public class Sequence {
+class Sequence {
     private Object[] items;
     private int next = 0;
     public Sequence(int size) { items = new Object[size]; }
@@ -16,14 +22,14 @@ public class Sequence {
         if(next < items.length)
             items[next++] = x;
     }
-    private class SequenceSelector implements SelectorEx2 {
+    private class SequenceSelector implements Selector {
         private int i = 0;
         public boolean end() { return i == items.length; }
         public Object current() { return items[i]; }
         public void next() { if(i < items.length) i++; }
     }
-    public SelectorEx2 selector() {
-        return new SequenceSelector();
+    public Selector selector() {
+        return new Sequence.SequenceSelector();
     }
     public static void main(String[] args) {
         SequenceEx2 sequence = new SequenceEx2(10);

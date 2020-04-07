@@ -1,15 +1,16 @@
+/*
 package eckel.innerclass;
 
 public class Ex2 {}
 interface ReverseSelector extends SelectorEx2{
     void prev();
 }
-interface SelectorEx2 {
+public interface SelectorEx2 {
     boolean end();
     Object current();
     void next();
 }
-class SequenceEx2 {
+public class SequenceEx2 {
     private Object[] items;
     private int next = 0;
     public SequenceEx2(int size) { items = new Object[size]; }
@@ -61,4 +62,4 @@ class StringHolder{
         //System.out.println(s);
         return s;
     }
-}
+}*/
