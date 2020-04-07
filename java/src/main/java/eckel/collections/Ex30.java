@@ -1,3 +1,4 @@
+/*
 package eckel.collections;
 
 import java.util.Collection;
@@ -6,9 +7,10 @@ import java.util.Iterator;
 public class Ex30 {
 }
 
-class CollectionSequence implements Collection{
+class CollectionSequence<T> implements Collection{
 
-    private Rodent[] arr=new Rodents().createArray(8);
+
+    private T[] arr=new T[8];
 
 
 
@@ -25,7 +27,16 @@ class CollectionSequence implements Collection{
     }
 
     public Iterator iterator() {
-        return null;
+        return new Itr();
+    }
+    private class Itr{
+        int cursor=0;
+        boolean hasNext(){return}
+        T next(){
+
+            return arr[cursor];
+        }
+
     }
 
     public Object[] toArray() {
@@ -65,3 +76,4 @@ class CollectionSequence implements Collection{
     }
 }
 
+*/
