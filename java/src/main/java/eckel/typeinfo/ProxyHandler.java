@@ -91,18 +91,20 @@ interface SomeMethods {
     void interesting(String arg);
     void boring3();
 }
-class Implementation implements SomeMethods
-        public void boring1() { System.out.println("boring1");
-            public void boring2() { System.out.println("boring2");
-                public void interesting(String arg) {
+class Implementation implements SomeMethods{
+        public void boring1() {
+            System.out.println("boring1");
+        }
+            public void boring2() {
+            System.out.println("boring2");
+        }
+            public void interesting(String arg) {
                     System.out.println("interesting " + arg);
                 }
-                public void boring3() { System.out.println("boring3");
-                }
-                {
-                }
-            }
+            public void boring3() {
+            System.out.println("boring3");
         }
+}
 class SelectingMethods {
     public static void main(String[] args) {
         SomeMethods proxy= (SomeMethods)Proxy.newProxyInstance(
