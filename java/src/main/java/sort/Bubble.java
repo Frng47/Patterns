@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Bubble {
     public static void sortMax(List<Integer> list){
-        Integer tmp;
         int stop=1;
         long time=System.nanoTime();
         while(stop!=list.size()-1){
