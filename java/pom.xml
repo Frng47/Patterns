@@ -1,0 +1,33 @@
+
+
+    <project>
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>com.mycompany.app</groupId>
+        <artifactId>my-app</artifactId>
+        <packaging>pom</packaging>
+        <version>1</version>
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <maven.compiler.source>1.8</maven.compiler.source>
+            <maven.compiler.target>1.8</maven.compiler.target>
+
+        </properties>
+        <plugins>
+            <plugin>
+
+            </plugin>
+        </plugins>
+        <modules>
+            <module>java</module>
+        </modules>
+        <dependencies>
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.0.13</version>
+        </dependency>
+        </dependencies>
+
+    </project>
+
+
