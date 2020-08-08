@@ -1,3 +1,4 @@
+/*
 package sort;
 
 import java.util.ArrayList;
@@ -8,9 +9,12 @@ public class Main {
         List<Integer> list=Aux.fillInt(10,10);
         System.out.println(list);
         Shaker.sort(list);
-        /*Bubble.sortMax(list);
+        */
+/*Bubble.sortMax(list);
         System.out.println(list);
         Bubble.sortMin(list);
-        System.out.println(list);*/
+        System.out.println(list);*//*
+
     }
 }
+*/
