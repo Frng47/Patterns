@@ -12,3 +12,12 @@ public class FunctionalInterfaces {
         System.out.println("Perimeter = " + perimeter.compute(3, 4));
     }
 }
+interface FInterface{
+    double calculator(double a,double b);
+}
+class Next{
+    public static void main(String[] args) {
+        FInterface exmpl=(a,b)->a*b;
+        System.out.println(exmpl.calculator(1,1));
+    }
+}
